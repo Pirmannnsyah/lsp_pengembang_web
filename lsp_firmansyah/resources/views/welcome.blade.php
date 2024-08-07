@@ -20,7 +20,7 @@
                 <h2 class="text-2xl font-semibold mb-4">Ayo gabung bersama kami di Universitas Terbuka</h2>
                 <p class="text-sm mb-4">Universitas Terbuka (UT) adalah perguruan tinggi negeri yang menyediakan pendidikan tinggi melalui sistem pendidikan jarak jauh. Didirikan pada tahun 1984, UT bertujuan untuk memberikan akses pendidikan tinggi yang lebih luas kepada masyarakat Indonesia,  Universitas ini menawarkan beragam program studi di berbagai bidang, termasuk ilmu pendidikan, ilmu sosial, ilmu ekonomi, sains dan teknologi, serta kesehatan.</p>
                 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <a href="login">Daftar Sekarang</a>
+                    <a href="/login">Daftar Sekarang</a>
                 </button>
             </div>
         </div>
