@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pengumuman</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="text-2xl m-4 font-semibold tracking-wide text-center">PENGUMUMAN</div>
+<body class="bg-gray-100 mt-24">
+    @extends('layout.navbar')
+
+    @section('title', 'Pengumuman')
+
+    @section('content')
+    <div class="text-3xl font-semibold text-center text-gray-800 mb-8">PENGUMUMAN</div>
+    
     @foreach ($pengumuman as $p)
-    <div class="m-4 border border-slate-200 rounded-2xl max-w-6xl mx-auto shadow-md p-4">
-        <form action="">
-            <p class="text-center mx-auto text-lg font-medium">{{ $p->judul_pengumuman }}</p>
-            <div class="border-2 border-slate-300 rounded my-1"></div>
-            <p>{{ $p->deskripsi_pengumuman }}</p>
-            <p>{{ $p->gambar_pengumuman }}</p>
-            <a href="/pengumuman/{{$p->id}}/edit">Edit</a>  
-            <form action="/pengumuman/{{ $p->id }}" method="POST">
-                @method('DELETE')
-                @csrf
-                <button type="submit">Delete</button>
-            </form>
-        </form>
+    <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-lg shadow-lg mb-6">
+        <div class="p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-2">{{ $p->judul_pengumuman }}</h2>
+            <div class="border-t border-gray-300 my-3"></div>
+            <p class="text-gray-700 mb-4">{{ $p->deskripsi_pengumuman }}</p>
+            <div class="flex justify-end space-x-4">
+                <a href="/pengumuman/{{$p->id}}/edit" class="text-blue-500 hover:underline">Edit</a>
+                <form action="/pengumuman/{{ $p->id }}" method="POST" class="inline">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="text-red-500 hover:underline">Delete</button>
+                </form>
+            </div>
+        </div>
     </div>
-     
     @endforeach
+    @endsection
 </body>
 </html>
-      
-
-
